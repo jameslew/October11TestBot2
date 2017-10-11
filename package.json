@@ -12,6 +12,7 @@
   "dependencies": {
     "botbuilder": "^3.8.4",
     "restify": "^5.0.0"
+    "unicode-properties": "^1.1.0"
   },
   "devDependencies": {
     "request": "^2.81.0",
