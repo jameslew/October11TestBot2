@@ -4,10 +4,14 @@ A simple "Hello World" bot for the Microsoft Bot Framework.
 var restify = require('restify');
 var builder = require('botbuilder');
 var unicodelib = require('unicode-properties');
+let appInsights = require('applicationinsights');
 
 //=========================================================
 // Bot Setup
 //=========================================================
+
+// Set up debugging analytics
+appInsights.setup("95ef1d0c-a9a0-4d1f-a59a-18ca6c7ea31a").start();
 
 // Create bot and setup server
 var connector = new builder.ChatConnector({
