@@ -11,14 +11,14 @@ var unicodelib = require('unicode-properties');
 
 // Create bot and setup server
 var connector = new builder.ChatConnector({
-   appId: '7dbef12d-aae2-4432-bef3-f5f1310d995e',
-   appPassword: 'jawjfNhLgiOsSufmW5fm2gW' 
+   appId: '65b11786-f7ab-4768-a7ee-dae3a71e1170',
+   appPassword: 've0ZZjG1wGo6DDey9V4QW52' 
 });
 var bot = new builder.UniversalBot(connector);
 
 // Setup Restify Server
 var server = restify.createServer();
-server.post('/api/messages', connector.verifyBotFramework(), connector.listen());
+server.post('/api/messages', connector.listen());
 //server.listen(process.env.port || 3798, function () {
 server.listen( 3798, function () {
    console.log('%s listening to %s', server.name, server.url);
