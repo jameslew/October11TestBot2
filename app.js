@@ -11,7 +11,16 @@ let appInsights = require('applicationinsights');
 //=========================================================
 
 // Set up debugging analytics
-appInsights.setup("95ef1d0c-a9a0-4d1f-a59a-18ca6c7ea31a").start();
+appInsights.setup("95ef1d0c-a9a0-4d1f-a59a-18ca6c7ea31a")
+    .setAutoDependencyCorrelation(true)
+    .setAutoCollectRequests(true)
+    .setAutoCollectPerformance(true)
+    .setAutoCollectExceptions(true)
+    .setAutoCollectDependencies(true)
+    .setAutoCollectConsole(true)
+    .setUseDiskRetryCaching(true)
+    .setAutoCollectConsole(true, true)
+    .start();
 
 // Create bot and setup server
 var connector = new builder.ChatConnector({
